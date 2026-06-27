@@ -471,22 +471,53 @@
       }
 
       .zonePlan {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 16px;
-        margin-bottom: 18px;
-        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none;
       }
 
+      /* fiecare coloană devine card separat */
+      .zonePlan > div {
+        background: rgba(255, 255, 255, .92);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 16px;
+        box-shadow: 0 6px 18px rgba(25, 50, 60, .08);
+      }
+
+      /* titlu */
       .zonePlan h3 {
-        font-size: 17px;
-        margin-bottom: 8px;
+        font-size: 15px;
+        margin: 0 0 10px;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
 
+      /* emoji pentru scanare vizuala */
+      .zonePlan > div:first-child h3::before {
+        content: "📍";
+      }
+
+      .zonePlan > div:last-child h3::before {
+        content: "🍽️";
+      }
+
+      /* lista */
       .zonePlan ul {
         padding-left: 18px;
         font-size: 14px;
-        line-height: 1.6;
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      .zonePlan li {
+        margin-bottom: 6px;
       }
 
       .grid,
